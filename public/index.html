@@ -2853,12 +2853,12 @@
             arc.style.strokeDashoffset = '0';
             document.getElementById('smsTimerWrap').style.display = 'flex';
 
-            let remaining = 60;
+            let remaining = 200;
             const CIRCUMFERENCE = 113;
 
             const tick = function() {
                 remaining--;
-                const pct = remaining / 60;
+                const pct = remaining / 200;
                 arc.style.strokeDashoffset = String(CIRCUMFERENCE * (1 - pct));
                 num.textContent = remaining;
                 sec.textContent = remaining;
